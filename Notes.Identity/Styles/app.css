@@ -1,37 +1,75 @@
-﻿.input {
-    font-size: 16px;
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: Arial;
+    background-color: #927ad7;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    padding: 25px;
+    border-radius: 20px;
     background-color: #fff;
-    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+    .field span {
+        margin-left: 7px;
+    }
+
+.input {
+    width: 350px;
+    padding: 10px 15px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    outline: none;
+    background: transparent;
+    font-size: 17px;
+    color: #474747;
 }
 
 .header {
-    font-family: Arial;
-    color: #332600;
-    font-size: 30px;
+    color: #474747;
+    font-size: 36px;
+    font-weight: 500;
     text-align: center;
+    margin-bottom: 0.5em;
 }
 
 .button {
-    font-size: 16px;
-    background-color: #a191bd;
-    border-radius: 4px;
-    color: #332600;
-    font-family: Arial;
-    width: 100%;
-}
-
-.block {
-    margin-top: 10px;
+    width: 350px;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: #927ad7;
+    font-size: 17px;
+    color: #ffffff;
+    margin-top: 0.7em;
+    cursor: pointer;
 }
 
 .switch-button {
-    margin-top: 8px;
-    font-size: 8px;
-    border-radius: 4px;
-    color: #332600;
-    font-family: Arial;
     display: inline-block;
     text-align: center;
-    width: 100%;
+    font-size: 11px;
+    border-radius: 10px;
+    color: #332600;
+    width: 50px;
 }

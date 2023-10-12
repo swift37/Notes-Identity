@@ -5,17 +5,15 @@
 <form asp-controller="Auth" asp-action="Login" method="post">
     <input type="hidden" asp-for="ReturnUrl">
     <div class="header">Sign In</div>
-    <div class="block">
-        <label>Username</label>
-        <input asp-for="Username" class="input">
+    <div class="field">
+        <input asp-for="Username" class="input" placeholder="Username">
         <span asp-validation-for="Username"></span>
     </div>
-    <div class="block">
-        <label>Password</label>
-        <input asp-for="Password" class="input">
+    <div class="field">
+        <input asp-for="Password" class="input" placeholder="Password">
         <span asp-validation-for="Password"></span>
     </div>
-    <div class="block">
+    <div class="field">
         <button type="submit" class="button">Sign In</button>
     </div>
     <a asp-controller="Auth" asp-action="Register" asp-route-returnUrl="@Model.ReturnUrl" class="switch-button">
