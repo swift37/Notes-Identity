@@ -84,7 +84,7 @@ namespace Notes.Identity.Controllers
         {
             await _signInManager.SignOutAsync();
             var logoutRequest = await _interactionService.GetLogoutContextAsync(logoutId);
-            return RedirectToAction(logoutRequest.PostLogoutRedirectUri);
+            return Redirect(logoutRequest.PostLogoutRedirectUri);
         }
     }
 }
