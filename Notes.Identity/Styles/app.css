@@ -30,7 +30,9 @@ form {
 }
 
     .field span {
-        margin-left: 7px;
+        font-size: 14px;
+        color: #cc0000;
+        margin-left: 0.5em;
     }
 
 .input {

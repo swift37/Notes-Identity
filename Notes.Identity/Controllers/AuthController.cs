@@ -37,7 +37,7 @@ namespace Notes.Identity.Controllers
             var user = await _userManager.FindByNameAsync(model.Username);
             if (user is null)
             {
-                ModelState.AddModelError(string.Empty, "User not found");
+                ModelState.AddModelError("Username", "User is not found.");
                 return View(model);
             }
 
@@ -45,7 +45,7 @@ namespace Notes.Identity.Controllers
             if (result.Succeeded)
                 return Redirect(model.ReturnUrl);
 
-            ModelState.AddModelError(string.Empty, "Login error");
+            ModelState.AddModelError("Password", "Incorrect password.");
 
             return View(model);
         }
@@ -76,7 +76,10 @@ namespace Notes.Identity.Controllers
                 return Redirect(model.ReturnUrl);
             }
 
-            ModelState.AddModelError(string.Empty, "Error occured");
+            if (result.Errors.Count() > 0)
+                foreach (var error in result.Errors)
+                    ModelState.AddModelError("Password", error.Description);
+
             return View(model);
         }
 
